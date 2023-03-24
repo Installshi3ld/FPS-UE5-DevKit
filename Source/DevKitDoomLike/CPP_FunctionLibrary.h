@@ -15,8 +15,12 @@ UCLASS()
 class DEVKITDOOMLIKE_API UCPP_FunctionLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
-	
 
+	UFUNCTION(BlueprintCallable, Category = "Custom CPP")
+		static void Print(FString message);
+
+	UFUNCTION(BlueprintCallable, Category = "Custom CPP")
+		static void ToggleAllLights();
 };
 
 
